@@ -1,0 +1,31 @@
+{
+  "name": "valkurash.github.io",
+  "version": "1.0.0",
+  "description": "Valentina Kurashova front-end portfolio",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valkurash/valkurash.github.io.git"
+  },
+  "keywords": [
+    "valkurash",
+    "kurashova",
+    "front-end",
+    "portfolio"
+  ],
+  "author": "Valentina Kurashova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valkurash/valkurash.github.io/issues"
+  },
+  "homepage": "https://github.com/valkurash/valkurash.github.io#readme"
+}
