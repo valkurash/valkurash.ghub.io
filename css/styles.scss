@@ -208,7 +208,7 @@ section#work {
 			}
 		}
 		&:hover {
-			border-color: #eee;
+			border-color: #ddd;
 			.box-caption {
 				opacity: 1;
 			}
@@ -239,44 +239,118 @@ section#about {
 			color: $active-color;
 		}
 	}
-	.skill-item {
-		width: 100px;
-		float: left;
-		margin: 20px;
-		svg {
-			width: 84px;
-			margin-bottom: 5px;
-		}
-		.title {
-			font-size: 1rem;
+	.skills-item {
+		.skill-item {
+			width: 100px;
+			float: left;
+			margin: 20px;
 			position: relative;
-			padding-top: 10px;
-			-webkit-transition: -webkit-transform 0.2s;
-			-moz-transition: -moz-transform 0.2s;
-			transition: transform 0.2s;
-			&:before {
-				content: '';
+			svg {
+				width: 84px;
 				position: absolute;
-				background: $active-color;
-				width: 30px;
-				height: 2px;
 				top: 0;
-				left: 35px;
-				-webkit-transition: margin-top 0.2s;
-				-moz-transition: margin-top 0.2s;
-				transition: margin-top 0.2s;
+				left: 8px;
+				-webkit-transition: all .5s ease-in-out;
+				-moz-transition: all .5s ease-in-out;
+				-o-transition: all .5s ease-in-out;
+				-ms-transition: all .5s ease-in-out;
+				transition: all .5s ease-in-out;
 			}
-		}
-		&:hover {
 			.title {
-				-webkit-transform: translateY(-15px);
-				-moz-transform: translateY(-15px);
-				-ms-transform: translateY(-15px);
-				transform: translateY(-15px);
+				margin-top: 90px;
+				font-size: 1rem;
+				position: relative;
+				padding-top: 10px;
+				-webkit-transition: -webkit-transform 0.2s;
+				-moz-transition: -moz-transform 0.2s;
+				transition: transform 0.2s;
 				&:before {
-					margin-top: 45px;
+					content: '';
+					position: absolute;
+					background: $active-color;
+					width: 30px;
+					height: 2px;
+					top: 0;
+					left: 35px;
+					-webkit-transition: margin-top 0.2s;
+					-moz-transition: margin-top 0.2s;
+					transition: margin-top 0.2s;
 				}
 			}
+			&:hover {
+				.title {
+					-webkit-transform: translateY(-15px);
+					-moz-transform: translateY(-15px);
+					-ms-transform: translateY(-15px);
+					transform: translateY(-15px);
+					&:before {
+						margin-top: 45px;
+					}
+				}
+			}
+		}
+		@for $i from 1 through 10 {
+			.transform-active:nth-child(#{$i}) {
+				svg {
+					z-index: 1;
+					cursor: pointer;
+					top: random(700) - 350 + px;
+					left: random(700) - 350 + px;
+				}
+			}
+		}
+		.shuffle {
+			float: left;
+			font-size: 1rem;
+			margin: 90px 20px 20px;
+			text-decoration: none;
+			span {
+				transition: all.5s ease;
+				padding: 3px 0;
+			}
+			&:hover span {
+				background: $active-color;
+				color: $grid-hover;
+			}
+		}
+	}
+}
+
+.sliding-u-l-r-l {
+	display: inline-block;
+	position: relative;
+	padding-bottom: 3px;
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 1px;
+		width: 0;
+		transition: width 0s ease, background .5s ease;
+	}
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		height: 1px;
+		width: 0;
+		background: $active-color;
+		transition: width .5s ease;
+	}
+	&:hover {
+		&:before {
+			width: 100%;
+			background: $active-color;
+			transition: width .5s ease;
+		}
+		&:after {
+			width: 100%;
+			background: transparent;
+			transition: all 0s ease;
 		}
 	}
 }
