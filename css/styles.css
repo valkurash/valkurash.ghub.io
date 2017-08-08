@@ -216,53 +216,53 @@ section#about {
   section#about .skills-item .transform-active:nth-child(1) svg {
     z-index: 1;
     cursor: pointer;
-    top: 156px;
-    left: 284px; }
+    top: -305px;
+    left: 228px; }
   section#about .skills-item .transform-active:nth-child(2) svg {
     z-index: 1;
     cursor: pointer;
-    top: 8px;
-    left: 100px; }
+    top: 135px;
+    left: 92px; }
   section#about .skills-item .transform-active:nth-child(3) svg {
     z-index: 1;
     cursor: pointer;
-    top: 178px;
-    left: -165px; }
+    top: 11px;
+    left: 141px; }
   section#about .skills-item .transform-active:nth-child(4) svg {
     z-index: 1;
     cursor: pointer;
     top: 127px;
-    left: 192px; }
+    left: 342px; }
   section#about .skills-item .transform-active:nth-child(5) svg {
     z-index: 1;
     cursor: pointer;
-    top: -276px;
-    left: -307px; }
+    top: 112px;
+    left: 186px; }
   section#about .skills-item .transform-active:nth-child(6) svg {
     z-index: 1;
     cursor: pointer;
-    top: -75px;
-    left: 270px; }
+    top: -173px;
+    left: 31px; }
   section#about .skills-item .transform-active:nth-child(7) svg {
     z-index: 1;
     cursor: pointer;
-    top: 184px;
-    left: 303px; }
+    top: -250px;
+    left: 324px; }
   section#about .skills-item .transform-active:nth-child(8) svg {
     z-index: 1;
     cursor: pointer;
-    top: 52px;
-    left: 215px; }
+    top: -261px;
+    left: 322px; }
   section#about .skills-item .transform-active:nth-child(9) svg {
     z-index: 1;
     cursor: pointer;
-    top: -293px;
-    left: 46px; }
+    top: 144px;
+    left: 150px; }
   section#about .skills-item .transform-active:nth-child(10) svg {
     z-index: 1;
     cursor: pointer;
-    top: 81px;
-    left: -111px; }
+    top: -148px;
+    left: 53px; }
   section#about .skills-item .shuffle {
     float: left;
     font-size: 1rem;
