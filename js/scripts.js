@@ -8,7 +8,7 @@ $(function () {
             scrollTop: $(this.hash).offset().top - $('header.main').height()
         }, 500);
     });
-    $(".shuffle:not(.active)").click(function () {
+    $(".shuffle:not(.active)").click(function (event) {
         event.preventDefault();
         $('.skill-item:not(.transform-active)').addClass('transform-active');
         $(this).addClass('active').text('Dammit! Now help me return my skills, please.')
