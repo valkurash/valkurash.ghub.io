@@ -143,6 +143,13 @@ section#work {
 	text-align: center;
 	max-width: 440px;
 	position: relative;
+	border: 20px solid #fff;
+	border-radius: 6px;
+	-webkit-transition: border-color .4s ease-in-out;
+	-moz-transition: border-color .4s ease-in-out;
+	-o-transition: border-color .4s ease-in-out;
+	-ms-transition: border-color .4s ease-in-out;
+	transition: border-color .4s ease-in-out;
 	@include respond-to(handhelds) {
 		width: 98%;
 	}
@@ -158,60 +165,60 @@ section#work {
 	@include respond-to(extra-wide-screens) {
 		width: 18%;
 	}
-	a {
+	img {
 		display: block;
 		position: relative;
-		border: 20px solid #fff;
-		border-radius: 6px;
-		-webkit-transition: border-color .4s ease-in-out;
-		-moz-transition: border-color .4s ease-in-out;
-		-o-transition: border-color .4s ease-in-out;
-		-ms-transition: border-color .4s ease-in-out;
-		transition: border-color .4s ease-in-out;
-		img {
-			display: block;
-			position: relative;
-			width: 100%;
-			max-width: 400px;
-		}
-		.box-caption {
-			opacity: 0;
-			-webkit-transition: all .4s ease-in-out;
-			-moz-transition: all .4s ease-in-out;
-			transition: all .4s ease-in-out;
+		width: 100%;
+		max-width: 400px;
+	}
+	.box-caption {
+		opacity: 0;
+		-webkit-transition: all .4s ease-in-out;
+		-moz-transition: all .4s ease-in-out;
+		transition: all .4s ease-in-out;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: $grid-hover;
+		height: 100%;
+		width: 100%;
+		padding: 5%;
+		box-sizing: border-box;
+		color: $active-color;
+		font-size: 1.5rem;
+		.box-content {
+			width: 90%;
+			text-align: center;
 			position: absolute;
-			top: 0;
-			left: 0;
-			background: $grid-hover;
-			height: 100%;
-			width: 100%;
-			padding: 5%;
-			box-sizing: border-box;
-			color: $active-color;
-			font-size: 1.5rem;
-			.box-content {
-				width: 90%;
+			top: 50%;
+			transform: translateY(-50%);
+			.project-name {
+				font-size: 1.2rem;
+				text-transform: uppercase;
+				margin-bottom: 20px;
+				letter-spacing: 1px;
+			}
+			.project-descr {
+				font-size: 1rem;
+				line-height: 1.5;
+			}
+			.work-link {
 				text-align: center;
-				position: absolute;
-				top: 50%;
-				transform: translateY(-50%);
-				.project-name {
-					font-size: 1.2rem;
-					text-transform: uppercase;
-					margin-bottom: 20px;
-					letter-spacing: 1px;
-				}
-				.project-descr {
-					font-size: 1rem;
-					line-height: 1.5;
-				}
+				padding: 5px 10px;
+				border-radius: 2px;
+				display: inline-block;
+				background: $active-color;
+				color: $grid-hover;
+				margin-top: 20px;
+				text-decoration: none;
+				font-size: 1rem;
 			}
 		}
-		&:hover {
-			border-color: #ddd;
-			.box-caption {
-				opacity: 1;
-			}
+	}
+	&:hover {
+		border-color: #ddd;
+		.box-caption {
+			opacity: 1;
 		}
 	}
 }
@@ -288,30 +295,25 @@ section#about {
 					}
 				}
 			}
-		}
-		@for $i from 1 through 10 {
-			.transform-active:nth-child(#{$i}) {
+			&.transform-active {
 				svg {
 					z-index: 1;
 					cursor: pointer;
-					top: random(700) - 350 + px;
-					left: random(350) + px;
 				}
 			}
 		}
-		.shuffle {
-			float: left;
-			font-size: 1rem;
-			margin: 90px 20px 20px;
-			text-decoration: none;
-			span {
-				transition: all.5s ease;
-				padding: 3px 0;
-			}
-			&:hover span {
-				background: $active-color;
-				color: $grid-hover;
-			}
+	}
+	.shuffle {
+		font-size: 1rem;
+		margin: 20px 20px;
+		text-decoration: none;
+		span {
+			transition: all.5s ease;
+			padding: 3px 0;
+		}
+		&:hover span {
+			background: $active-color;
+			color: $grid-hover;
 		}
 	}
 }
@@ -353,6 +355,14 @@ section#about {
 			transition: all 0s ease;
 		}
 	}
+}
+
+section.goodbye {
+	background: #fff;
+	font-size: 3rem;
+	font-family: 'Pacifico', cursive;
+	text-align: center;
+	padding: 30px 0;
 }
 
 footer {

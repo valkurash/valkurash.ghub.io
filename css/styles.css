@@ -87,7 +87,14 @@ section#work {
   box-sizing: border-box;
   text-align: center;
   max-width: 440px;
-  position: relative; }
+  position: relative;
+  border: 20px solid #fff;
+  border-radius: 6px;
+  -webkit-transition: border-color .4s ease-in-out;
+  -moz-transition: border-color .4s ease-in-out;
+  -o-transition: border-color .4s ease-in-out;
+  -ms-transition: border-color .4s ease-in-out;
+  transition: border-color .4s ease-in-out; }
   @media (max-width: 600px) {
     .work-item {
       width: 98%; } }
@@ -103,54 +110,54 @@ section#work {
   @media (min-width: 1960px) {
     .work-item {
       width: 18%; } }
-  .work-item a {
+  .work-item img {
     display: block;
     position: relative;
-    border: 20px solid #fff;
-    border-radius: 6px;
-    -webkit-transition: border-color .4s ease-in-out;
-    -moz-transition: border-color .4s ease-in-out;
-    -o-transition: border-color .4s ease-in-out;
-    -ms-transition: border-color .4s ease-in-out;
-    transition: border-color .4s ease-in-out; }
-    .work-item a img {
-      display: block;
-      position: relative;
-      width: 100%;
-      max-width: 400px; }
-    .work-item a .box-caption {
-      opacity: 0;
-      -webkit-transition: all .4s ease-in-out;
-      -moz-transition: all .4s ease-in-out;
-      transition: all .4s ease-in-out;
+    width: 100%;
+    max-width: 400px; }
+  .work-item .box-caption {
+    opacity: 0;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 5%;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 1.5rem; }
+    .work-item .box-caption .box-content {
+      width: 90%;
+      text-align: center;
       position: absolute;
-      top: 0;
-      left: 0;
-      background: #fff;
-      height: 100%;
-      width: 100%;
-      padding: 5%;
-      box-sizing: border-box;
-      color: #333;
-      font-size: 1.5rem; }
-      .work-item a .box-caption .box-content {
-        width: 90%;
+      top: 50%;
+      transform: translateY(-50%); }
+      .work-item .box-caption .box-content .project-name {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        letter-spacing: 1px; }
+      .work-item .box-caption .box-content .project-descr {
+        font-size: 1rem;
+        line-height: 1.5; }
+      .work-item .box-caption .box-content .work-link {
         text-align: center;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%); }
-        .work-item a .box-caption .box-content .project-name {
-          font-size: 1.2rem;
-          text-transform: uppercase;
-          margin-bottom: 20px;
-          letter-spacing: 1px; }
-        .work-item a .box-caption .box-content .project-descr {
-          font-size: 1rem;
-          line-height: 1.5; }
-    .work-item a:hover {
-      border-color: #ddd; }
-      .work-item a:hover .box-caption {
-        opacity: 1; }
+        padding: 5px 10px;
+        border-radius: 2px;
+        display: inline-block;
+        background: #333;
+        color: #fff;
+        margin-top: 20px;
+        text-decoration: none;
+        font-size: 1rem; }
+  .work-item:hover {
+    border-color: #ddd; }
+    .work-item:hover .box-caption {
+      opacity: 1; }
 
 section#about {
   font-size: 1.4rem;
@@ -213,65 +220,17 @@ section#about {
       transform: translateY(-15px); }
       section#about .skills-item .skill-item:hover .title:before {
         margin-top: 45px; }
-  section#about .skills-item .transform-active:nth-child(1) svg {
-    z-index: 1;
-    cursor: pointer;
-    top: -166px;
-    left: 195px; }
-  section#about .skills-item .transform-active:nth-child(2) svg {
-    z-index: 1;
-    cursor: pointer;
-    top: -64px;
-    left: 220px; }
-  section#about .skills-item .transform-active:nth-child(3) svg {
-    z-index: 1;
-    cursor: pointer;
-    top: -29px;
-    left: 288px; }
-  section#about .skills-item .transform-active:nth-child(4) svg {
-    z-index: 1;
-    cursor: pointer;
-    top: 239px;
-    left: 153px; }
-  section#about .skills-item .transform-active:nth-child(5) svg {
-    z-index: 1;
-    cursor: pointer;
-    top: 297px;
-    left: 188px; }
-  section#about .skills-item .transform-active:nth-child(6) svg {
-    z-index: 1;
-    cursor: pointer;
-    top: 142px;
-    left: 120px; }
-  section#about .skills-item .transform-active:nth-child(7) svg {
-    z-index: 1;
-    cursor: pointer;
-    top: -273px;
-    left: 267px; }
-  section#about .skills-item .transform-active:nth-child(8) svg {
-    z-index: 1;
-    cursor: pointer;
-    top: -32px;
-    left: 168px; }
-  section#about .skills-item .transform-active:nth-child(9) svg {
-    z-index: 1;
-    cursor: pointer;
-    top: 154px;
-    left: 102px; }
-  section#about .skills-item .transform-active:nth-child(10) svg {
-    z-index: 1;
-    cursor: pointer;
-    top: -242px;
-    left: 183px; }
-  section#about .skills-item .shuffle {
-    float: left;
+    section#about .skills-item .skill-item.transform-active svg {
+      z-index: 1;
+      cursor: pointer; }
+  section#about .shuffle {
     font-size: 1rem;
-    margin: 90px 20px 20px;
+    margin: 20px 20px;
     text-decoration: none; }
-    section#about .skills-item .shuffle span {
+    section#about .shuffle span {
       transition: all 0.5s ease;
       padding: 3px 0; }
-    section#about .skills-item .shuffle:hover span {
+    section#about .shuffle:hover span {
       background: #333;
       color: #fff; }
 
@@ -306,6 +265,13 @@ section#about {
     width: 100%;
     background: transparent;
     transition: all 0s ease; }
+
+section.goodbye {
+  background: #fff;
+  font-size: 3rem;
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  padding: 30px 0; }
 
 footer {
   text-align: center;
