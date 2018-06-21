@@ -1,26 +1,3 @@
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- @valkurash Sign out
-1
-1 0 valkurash/BooksRoutes
- Code  Issues 7  Pull requests 0  Projects 0  Wiki  Insights  Settings
-BooksRoutes/.gitignore
-7df452b  on 26 Oct 2017
-@valkurash valkurash Initial commit
-We found potential security vulnerabilities in your dependencies.
-Some of the dependencies defined in books-routes-app/package-lock.json and books-routes-api/package-lock.json have known security vulnerabilities and should be updated.
-
-Only the owner of this repository can see this message.
-Learn more about vulnerability alerts
-
-     
-60 lines (42 sloc)  884 Bytes
 # Logs
 logs
 *.log
